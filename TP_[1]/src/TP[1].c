@@ -4,7 +4,6 @@
 #define ASIGNADO 1
 
 /** \brief mostrar el menu de opciones
- * \param
  * \return retorna el valor de la variable opcion
  *
  */
@@ -146,11 +145,6 @@ int main()
             break;
         }
         system("pause");
-
-
-        /*printf("Desea seguir?");
-        fflush(stdin);
-        scanf("%d", &seguir);*/
     }while(seguir == 's');
 
     return 0;
