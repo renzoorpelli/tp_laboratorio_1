@@ -153,6 +153,7 @@ int main()
 int menu()
 {
     int opcion;
+    system("cls");
     printf("MENU DE OPCINES\n\n");
     printf("1. Ingresar primer operando A=X\n");
     printf("2. Ingresar el segundo operando B=Y\n");
