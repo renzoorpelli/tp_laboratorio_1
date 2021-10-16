@@ -6,6 +6,7 @@
 #include "ArrayEmployees.h"
 #include "validarEntero.h"
 #include "validarCadena.h"
+#include "validarFlotante.h"
 
 
 
@@ -46,7 +47,7 @@ int newEmployee(Employee list[], int len, int* pId)
     char auxLongName[100];
     char auxLongLastName[100];
     int checkStatus = -1;
-    int auxSalario;
+    float auxSalario;
     int auxSector;
     int r;//variable que guarda el retorno de name
     int x;// variable q guarda el retorno de lastname
@@ -97,7 +98,7 @@ int newEmployee(Employee list[], int len, int* pId)
 
             strncpy(auxEmployee.lastName, auxLongLastName, sizeof(auxEmployee.lastName));
 
-            validarEntero(&auxSalario, "Ingrese un salario: \n", "Eror, ingrese un salario valido:\n", 2000, 10000, 10);
+            validarEnteroFloat(&auxSalario, "Ingrese un salario: \n", "Eror, ingrese un salario valido:\n", 2000, 10000, 10);
             auxEmployee.salary = auxSalario;
 
             validarEntero(&auxSector, "Ingrese el sector: \n", "Error, ingrese un sector valido:\n", 1, 10, 10);
@@ -115,7 +116,7 @@ int newEmployee(Employee list[], int len, int* pId)
 }
 
 
-int addEmployee(Employee list[], int len, int id, char name[], char lastName[], int salary, int sector)
+int addEmployee(Employee list[], int len, int id, char name[], char lastName[], float salary, int sector)
 {
     int checkStatus = -1;
     int place;
@@ -260,7 +261,7 @@ int modifyEmployee(Employee* list, int len)
     char seguir = 's';
     char auxName[51];
     char auxLastName[51];
-    int auxSalary;
+    float auxSalary;
     int auxSector;
     int fixName; // guarda el retorno de name en la funcion findError
     int fixLastName; // guarda el retorno de lastname en ela funcion find error
@@ -323,7 +324,7 @@ int modifyEmployee(Employee* list, int len)
                         strcpy(list[location].lastName, auxLastName);
                         break;
                     case 3:
-                        validarEntero(&auxSalary, "Ingrese un nuevo salario:\n", "Error, ingrese un nuevo salario valido:\n", 2000, 10000, 10);
+                    	validarEnteroFloat(&auxSalary, "Ingrese un nuevo salario:\n", "Error, ingrese un nuevo salario valido:\n", 2000, 10000, 10);
                         list[location].salary = auxSalary;
                         break;
                     case 4:

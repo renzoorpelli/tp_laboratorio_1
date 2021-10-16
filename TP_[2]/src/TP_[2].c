@@ -5,6 +5,7 @@
 #include "ArrayEmployees.h"
 #include "validarEntero.h"
 #include "validarCadena.h"
+#include "validarFlotante.h"
 
 #define TAM 1000
 

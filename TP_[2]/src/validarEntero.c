@@ -4,6 +4,7 @@
 #include "ArrayEmployees.h"
 #include "validarEntero.h"
 #include "validarCadena.h"
+#include "validarFlotante.h"
 int getInt (int* pResultado)
 {
     int retorno = -1;

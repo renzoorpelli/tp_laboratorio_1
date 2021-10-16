@@ -52,7 +52,7 @@ int findPlace(Employee *list, int len);
  * \return int Return (-1) if Error [Invalid length or NULL pointer or without
 free space] - (0) if Ok
 */
-int addEmployee(Employee* list, int len, int id, char name[], char lastName[],int salary,int sector);
+int addEmployee(Employee* list, int len, int id, char name[], char lastName[],float salary,int sector);
 
 int newEmployee(Employee list[], int len, int* pId);
 /** \brief print the content of employees array
