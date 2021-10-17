@@ -18,6 +18,7 @@ int main()
 	    int defaultId = 20000;
 	    Employee list [TAM];// vector socios
 	    float fullSalary;//guarda el promedio de salario
+	    float totalSalary; // guarda el total de los salarios
 	    int flagInicio = 0;
 
 	    if(!initEmployees(list, TAM))
@@ -102,14 +103,14 @@ int main()
 	            }
 	            else
 	            {
-	                if (salaryEmployees(list, TAM, &fullSalary))
+	                if (salaryEmployees(list, TAM, &fullSalary, &totalSalary))
 	                {
 	                    printf("No se pudo promediar el salario de  las personas\n");
 	                }
 	                else
 	                {
-	                    printf("el promedio de salario es de : %.2f\n", fullSalary);
-	                    cobranBien(list, TAM,fullSalary);
+	                    printf("El total a pagar por salarios es de %.2f y el promedio de salario es de : %.2f\n", totalSalary ,fullSalary);
+	                    cobranBien(list, TAM,fullSalary, totalSalary);
 	                }
 	            }
 	            break;

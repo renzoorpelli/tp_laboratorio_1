@@ -439,7 +439,7 @@ int sortOrderMenu()
     return opcion;
 }
 
-int salaryEmployees(Employee* list, int len, float *pSalario)
+int salaryEmployees(Employee* list, int len, float *pSalario, float *pTotalSalario)
 {
     int checkStatus = -1;
     float auxSalary = 0;
@@ -458,6 +458,7 @@ int salaryEmployees(Employee* list, int len, float *pSalario)
         checkStatus = 0;
 
         *pSalario = (float)auxSalary /contSalary;
+        *pTotalSalario = auxSalary;
 
     }
 
@@ -465,12 +466,12 @@ int salaryEmployees(Employee* list, int len, float *pSalario)
 }
 
 
-int cobranBien(Employee* list, int len, float salario)
+int cobranBien(Employee* list, int len, float salario, float totalSalario)
 {
     int checkStatus = -1;
     int cont = 0;
 
-    salaryEmployees(list,len, &salario);
+    salaryEmployees(list,len, &salario, &totalSalario);
 
     if (list != NULL && len > 0)
     {

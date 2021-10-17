@@ -147,7 +147,7 @@ int sortOrderMenu();
  *
  */
 
-int salaryEmployees(Employee* list, int len, float *pSalario);
+int salaryEmployees(Employee* list, int len, float *pSalario, float *pTotalSalario);
 
 /** \brief function that acumulate the salary and show how many employees have a good salary
  *
@@ -159,7 +159,7 @@ int salaryEmployees(Employee* list, int len, float *pSalario);
  */
 
 
-int cobranBien (Employee* list, int len, float salario);
+int cobranBien (Employee* list, int len, float salario, float totalSalario);
 
 
 #endif /* ARRAYEMPLOYEES_H_ */
