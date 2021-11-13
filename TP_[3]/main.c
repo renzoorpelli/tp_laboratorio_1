@@ -22,6 +22,7 @@ int menu();
 
 int main()
 {
+	setbuf(stdout,NULL);
     char salir;
     char seguir = 's';
     LinkedList* listaEmpleados = ll_newLinkedList();
